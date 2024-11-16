@@ -46,7 +46,7 @@ const Value = () => {
     return <p>Count: {count}</p>;
 };
 
-const App = () => {
+const App1 = () => {
     return (
         <div>
             <Count_Controller />
@@ -54,4 +54,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default App1;

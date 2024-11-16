@@ -1,25 +1,11 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
+import { usePostTitle } from './hooks/usePostTitle';
+import './App.css';
 
 const App = () => {
-    const items = [
-        { id: 1, info: 'Item 1' },
-        { id: 2, info: 'Item 2' },
-        { id: 3, info: 'Item 3' },
-        { id: 4, info: 'Item 4' },
-        { id: 5, info: 'Item 5' },
-    ];
+    const PostTitle = usePostTitle();
 
-    return <ItemList items={items} />;
-};
-
-const ItemList = ({ items }) => {
-    return (
-        <ul>
-            {items.map((item) => (
-                <li key={item.id}>{item.info}</li>
-            ))}
-        </ul>
-    );
+    return <div>{PostTitle}</div>;
 };
 
 export default App;
